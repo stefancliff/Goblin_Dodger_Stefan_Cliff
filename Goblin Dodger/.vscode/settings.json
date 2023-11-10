@@ -51,5 +51,8 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Goblin Dodger.sln"
+    "dotnet.defaultSolution": "Goblin Dodger.sln",
+    "cSpell.words": [
+        "Dont"
+    ]
 }

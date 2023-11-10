@@ -11,7 +11,11 @@ GameObject:
   - component: {fileID: 5924819574248093065}
   - component: {fileID: 7634634648663338077}
   - component: {fileID: 3939098315158908838}
-  m_Layer: 0
+  - component: {fileID: 5658536903677063538}
+  - component: {fileID: -5304122115731726223}
+  - component: {fileID: -4421687589588469200}
+  - component: {fileID: -9218099967797902056}
+  m_Layer: 6
   m_Name: Player Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,8 +83,92 @@ MonoBehaviour:
   moveSpeed: 5
   paddingLeft: 0.5
   paddingRight: 0.5
-  paddingTop: 7.5
+  paddingTop: 8
   paddingBottom: 3
+--- !u!50 &5658536903677063538
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5924819574248093078}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &-5304122115731726223
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5924819574248093078}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.017787308, y: -0.0029645562}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.1007948, y: 0.52567124}
+  m_EdgeRadius: 0
+--- !u!114 &-4421687589588469200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5924819574248093078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f980737bc3d19240a08fc2f3208e139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayer: 1
+  health: 100
+  scoreValue: 0
+  hitEffect: {fileID: 3089137715983292492, guid: 085be9cef587d0f45840abdaf0fde739, type: 3}
+  applyCameraShake: 1
+--- !u!114 &-9218099967797902056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5924819574248093078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70e97c289dd7e3d4a98b093d5b554bd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 2169902298082589164, guid: b9035cf8fa0bebe4daebd9e61ca59fd5, type: 3}
+  projectileSpeed: 10
+  projectileLifeTime: 5
+  useAI: 0
+  baseProjectileFiringRate: 1
+  ProjectileRateVariance: 0.2
+  ProjectileFireRateMinimum: 0.2
+  isFiring: 0
 --- !u!1 &5924819575311094068
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,7 +179,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5924819575311094071}
   - component: {fileID: 5924819575311094070}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player Character Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +241,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 0423e351306cb47458051ddf231cff89, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
